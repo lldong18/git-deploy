@@ -83,6 +83,7 @@ if (!empty(TOKEN) && isset($_SERVER["HTTP_X_HUB_SIGNATURE"]) && $token !== hash_
 
             /**
              * Attempt to reset specific hash if specified
+             * reset all changes that made on the server directly in case
              */
             if (!empty($_GET["reset"]) && $_GET["reset"] === "true") {
                 // write to the log
@@ -112,6 +113,7 @@ if (!empty(TOKEN) && isset($_SERVER["HTTP_X_HUB_SIGNATURE"]) && $token !== hash_
                 fputs($file, "*** BEFORE_PULL INITIATED ***" . "\n");
 
                 // execute the command, returning the output and exit code
+                // ex:
                 exec(BEFORE_PULL . " 2>&1", $output, $exit);
 
                 // reformat the output as a string
