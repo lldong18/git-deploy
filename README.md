@@ -9,11 +9,12 @@ You can configure which branch this script pulls from. This script is useful for
 ## On your server
 
 ### install git on linux server
-Install git
-- sudo yum install git
+Install Git
+- `sudo yum install git`
+
 Setting up Git
-- git config --global user.name "Your Name"
-- git config --global user.email "you@example.com"
+- `git config --global user.name "Your Name"`
+- `git config --global user.email "you@example.com"`
 
 ### SSH
 
